@@ -1,0 +1,7 @@
+function reverse(str) {
+    return str.split("") // convert the string to an array
+    .reduce((reversed, character) => { // use reduce method on the array, it reduce the array to a single entity
+    // the reduce method takes a callback and an initaial value which is an empty string here
+        return character + reversed;
+    }, "");
+}
