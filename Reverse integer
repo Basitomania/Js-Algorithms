@@ -1,0 +1,10 @@
+// Given an integer, return an integer that is the reverse
+// ordering of numbers.
+// --- Examples
+//   reverseInt(15) === 51
+
+function reverseInt(n) {
+    let arr = n.toString().split("").reverse().join(""); //convert the number to string + reverse
+    let num = parseInt(arr); // convert string to integer
+    return Math.sign(n) * num; //math sign check whether the input is -ve or +ve, it return either -1 or 1
+}
