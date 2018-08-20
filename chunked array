@@ -1,0 +1,12 @@
+// Given an array and chunk size, divide the array into many subarrays
+// where each subarray is of length size
+// --- Examples
+// chunk([1, 2, 3, 4], 2) --> [[ 1, 2], [3, 4]]
+
+function chunk(array, size) {
+    const chunked = []; // create an empty array
+    for(let i =0; i < array.length; i+=size){ // use a for loop to iterate over the array while increment the index by size
+        chunked.push(array.slice(i, i+size)) // slice out the subarray starting from index and ending at index+size
+    }
+    return chunked;
+}
